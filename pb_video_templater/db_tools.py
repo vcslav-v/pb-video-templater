@@ -25,7 +25,6 @@ def make_done(ident: int):
 
 
 def get_local_items_data() -> schemas.Page:
-    check_correct_local_data()
     page = schemas.Page()
     with db.SessionLocal() as session:
         videos = session.query(models.Video).all()
